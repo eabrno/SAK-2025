@@ -5,7 +5,7 @@ Statický generátor fotogalerie pro dokumentaci výuky. Obsah se spravuje pouze
 ## Struktura tématu
 
 ```text
-topics/2026-10-01-zlomky/
+topics/2026-10-01-exkurze/
 ├── index.md
 ├── 001.jpg
 ├── 002.jpg
@@ -18,11 +18,11 @@ Název adresáře je libovolný – pokud začíná datem (`RRRR-MM-DD-...`), po
 
 ```yaml
 ---
-title: Zlomky
+title: Exkurze
 date: 2026-10-01
-subject: Matematika
-class: 7.A
-description: Sčítání a odčítání zlomků
+subject: sak
+class: NA1
+description: Exkurze do muzea
 cover: 001.jpg
 hidden_images:
   - 003.jpg
