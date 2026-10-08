@@ -157,9 +157,40 @@ nav a:focus-visible,
 .markdown-body a { color: #3f51b5; }
 .markdown-body img { max-width: 100%; }
 
-nav { margin: 0 -4rem 3.5rem; padding: 1.25rem 4rem; border-bottom: 1px solid #e9e8e8; }
-nav a { color: #3f51b5; font-size: .9375rem; font-weight: 500; text-decoration: none; }
-nav a:hover { text-decoration: underline; }
+.site-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 -4rem 3.5rem;
+  padding: .75rem 4rem;
+  background: #202124;
+  border-bottom: 2px solid #3f51b5;
+}
+
+.site-bar-name {
+  color: #fff;
+  font-size: .9375rem;
+  font-weight: 500;
+  letter-spacing: .02em;
+  text-decoration: none;
+}
+
+.site-bar-name:hover { color: #c5cae9; }
+
+.site-bar-back {
+  color: #9fa8da;
+  font-size: .875rem;
+  font-weight: 400;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-bar-back:hover { color: #fff; text-decoration: underline; }
+
+.site-bar a:focus-visible {
+  outline: 3px solid #7986cb;
+  outline-offset: 3px;
+}
 
 .gallery {
   display: grid;
@@ -263,6 +294,9 @@ dialog button:hover { background: rgb(255 255 255 / 26%); }
   .site-header { margin: 0 -1.25rem 2.25rem; padding: 6rem 1.25rem 3rem; }
   .site-header p { font-size: 1.0625rem; }
   nav { margin: 0 -1.25rem 2.5rem; padding: 1rem 1.25rem; }
+  .site-bar { margin: 0 -1.25rem 2.25rem; padding: .6rem 1.25rem; }
+  .site-bar-name { font-size: .8125rem; }
+  .site-bar-back { font-size: .75rem; }
   .topics { grid-template-columns: 1fr; gap: 1.5rem; }
   .topic-info { padding: 1.25rem; }
   .gallery { grid-template-columns: 1fr; gap: .75rem; margin-top: 1.75rem; }

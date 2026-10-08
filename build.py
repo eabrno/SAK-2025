@@ -149,6 +149,8 @@ for p in STATIC.glob("*"):
     if p.is_file():
         shutil.copy2(p, OUT / p.name)
 
+gallery_title = os.environ.get("GALLERY_TITLE", "Galerie studentských prací")
+
 items = []
 if not TOPICS.exists():
     TOPICS.mkdir()
@@ -245,6 +247,7 @@ for directory in [x for x in TOPICS.iterdir() if x.is_dir()]:
         videos_html=videos_html,
         image_count=len(images),
         slug=escape(slug),
+        gallery_title=escape(gallery_title),
     )
     (target / "index.html").write_text(topic_html, encoding="utf-8")
 
@@ -294,7 +297,7 @@ header_style = (
     if header_image else ""
 )
 
-title = os.environ.get("GALLERY_TITLE", "Galerie studentských prací")
+title = gallery_title
 index_html = render(
     load_template("index.html"),
     title=escape(title),
